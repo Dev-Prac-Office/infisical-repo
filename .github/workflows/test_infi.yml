@@ -21,7 +21,7 @@ jobs:
 
       - name: Fetch secret safely
         run: |
-          infisical run --env=dev -- printenv API_KEY
+          infisical run --env=dev -- bash -c 'echo "API_KEY is: $API_KEY"'
 
       - name: Success message
         run: echo "✅ Infisical connection successful"
